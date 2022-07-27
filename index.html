@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <div class="container py-5">
+        <h1>Bài 1</h1>
+        <div class="row">
+            <div class="col-12 col-lg-4">
+              <div class="form-group">
+                <input type="number"
+                  class="form-control" name="" id="txt-diem-chuan"  placeholder="Điểm chuẩn">
+              </div>
+             
+          </div>
+            <div class="col-12 col-lg-4">
+              <select class="form-control form__input" name="" id="txt-chon-khu-vuc">
+                  <option value="0">Chọn khu vực</option>
+                  <option value="2">A</option>
+                  <option value="1">B</option>
+                  <option value="0.5">C</option>
+              </select>
+          </div>
+            <div class="col-12 col-lg-4">
+              <select class="form-control form__input" name="" id="txt-chon-doi-tuong">
+                  <option value="0">Chọn Đối Tượng</option>
+                  <option value="2.5">1</option>
+                  <option value="1.5">2</option>
+                  <option value="1">3</option>
+              </select>
+            </div>
+         </div>
+        </div>
+      </div>
+      <div class="container py-3">
+        <div class="row">
+            <div class="col-12 col-lg-4">
+              <div class="form-group">
+                <input type="number"
+                  class="form-control" name="" id="txt-diem-1"  placeholder="Điểm Thi Môn Thứ 1">
+              </div>
+          </div>
+            <div class="col-12 col-lg-4">
+              <div class="form-group">
+                <input type="number"
+                  class="form-control" name="" id="txt-diem-2"   placeholder="Điểm Thi Môn Thứ 2">
+              </div>  
+          </div>
+            <div class="col-12 col-lg-4">
+              <div class="form-group">
+                <input type="number"
+                  class="form-control" name="" id="txt-diem-3"   placeholder="Điểm Thi Môn Thứ 3">
+              </div>
+            </div>
+            <div class="col-12">
+              <button onclick="ketQuaThi()" class="btn btn-success" type="button">Kết Quả</button>
+          </div>
+         </div>
+         <div class="alert alert-success" id="result1">
+      </div>
+        </div>
+      </div>
+      <div class="container py-5">
+        <h1>Bài 2</h1>
+        <div class="row">
+            <div class="col-12 col-lg-4">
+              <div class="form-group">
+                <input type="text"
+                class="form-control" name="" id="txt-ten"  placeholder="Nhập Họ Tên">
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="form-group">
+                <input type="number"
+                  class="form-control" name="" id="txt-kw"  placeholder="Nhập Số Kw">
+              </div>
+           </div>
+           <div class="col-12">
+            <button onclick="tinhTienDien()" class="btn btn-success" type="button">Tính Tiền Điện</button>
+        </div>
+       </div>
+       <div class="alert alert-success" id="result2">
+    </div>
+   </div>
+      <div class="container py-5">
+        <h1>Bài 3</h1>
+        <div class="row">
+            <div class="col-12 col-lg-4">
+              <div class="form-group">
+                <input type="text"
+                class="form-control" name="" id="txt-ho-ten"  placeholder="Nhập Họ Tên">
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="form-group">
+                <input type="number"
+                  class="form-control" name="" id="txt-tong-thu-nhap"  placeholder="Nhập Tổng Thu Nhập Năm">
+              </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="form-group">
+              <input type="number"
+                class="form-control" name="" id="txt-phu-thuoc"  placeholder="Nhập Số Người Phụ Thuộc">
+            </div>
+        </div>
+          <div class="col-12">
+            <button onclick="tinhTienThue()" class="btn btn-success" type="button">Tính Tiền Thuế</button>
+        </div>
+      </div>
+      <div class="alert alert-success" id="result3">
+    </div>
+    </div>
+    <div class="container py-5">
+      <h1>Bài 4</h1>
+      <div class="row">
+        
+        <div class="col-12  col-lg-4">
+          <select class="form-control form__input" name="" id="txt-user" onchange="disableInput()">
+              <option value="">Chọn loại khách hàng</option>
+              <option value="nhaDan">Nhà Dân</option>
+              <option value="congTy">Doanh Nghiệp</option>                                      
+          </select>
+      </div>
+      <div class="col-12 col-lg-4">
+        <div class="form-group">
+          <input type="number"
+            class="form-control" name="" id="txt-ma-kh"  placeholder="Nhập Mã Khách Hàng">
+        </div>
+     </div>
+        <div class="col-12 col-lg-4">
+        <div class="form-group">
+          <input type="number"
+            class="form-control" name="" id="txt-kenh"  placeholder="Nhập Số Kênh Cao Cấp">
+        </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="form-group">
+            <input type="number"
+              class="form-control" style="display: block;"  name="" id="txt-ket-noi" placeholder="Số kết nối">
+          </div>
+          </div>
+        <div class="col-12">
+          <button onclick="tinhTienCap()" class="btn btn-success" type="button">Tính Tiền Cáp</button>
+      </div>
+     </div>
+     <div class="alert alert-success" id="result4">
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
